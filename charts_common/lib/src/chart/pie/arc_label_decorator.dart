@@ -137,7 +137,9 @@ class ArcLabelDecorator<D> extends ArcRendererDecorator<D> {
         }
 
         final arcAngle = element.endAngle - element.startAngle;
-
+        if (arcAngle.isNaN || arcAngle.isInfinite) {
+          return;
+        }
         final centerAngle = element.startAngle + (arcAngle / 2);
 
         final centerRadius = arcElements.innerRadius +
