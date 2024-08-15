@@ -1,5 +1,3 @@
-// @dart=2.9
-
 // Copyright 2018 the Charts project authors. Please see the AUTHORS file
 // for details.
 //
@@ -16,6 +14,20 @@
 // limitations under the License.
 
 import 'dart:math' show Rectangle;
+
+import 'package:charts_common/src/chart/bar/bar_label_decorator.dart'
+    show
+        BarLabelDecorator,
+        BarLabelAnchor,
+        BarLabelPlacement,
+        BarLabelPosition,
+        BarLabelVerticalPosition;
+import 'package:charts_common/src/chart/bar/bar_renderer.dart'
+    show ImmutableBarRendererElement;
+import 'package:charts_common/src/chart/cartesian/axis/spec/axis_spec.dart'
+    show TextStyleSpec;
+import 'package:charts_common/src/chart/common/chart_canvas.dart'
+    show ChartCanvas;
 import 'package:charts_common/src/chart/common/processed_series.dart'
     show ImmutableSeries;
 import 'package:charts_common/src/common/color.dart' show Color;
@@ -27,21 +39,7 @@ import 'package:charts_common/src/common/text_element.dart'
 import 'package:charts_common/src/common/text_measurement.dart'
     show TextMeasurement;
 import 'package:charts_common/src/common/text_style.dart' show TextStyle;
-import 'package:charts_common/src/chart/bar/bar_renderer.dart'
-    show ImmutableBarRendererElement;
-import 'package:charts_common/src/chart/cartesian/axis/spec/axis_spec.dart'
-    show TextStyleSpec;
-import 'package:charts_common/src/chart/common/chart_canvas.dart'
-    show ChartCanvas;
-import 'package:charts_common/src/chart/bar/bar_label_decorator.dart'
-    show
-        BarLabelDecorator,
-        BarLabelAnchor,
-        BarLabelPlacement,
-        BarLabelPosition,
-        BarLabelVerticalPosition;
 import 'package:charts_common/src/data/series.dart' show AccessorFn;
-
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 
